@@ -10,6 +10,10 @@ function format(value) {
 }
 
 function updateCountdown() {
+  if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
+    return;
+  }
+
   const now = new Date();
   const diff = targetDate - now;
 
@@ -34,4 +38,3 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
-
