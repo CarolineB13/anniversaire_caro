@@ -85,172 +85,164 @@
   <div class="container">
     <div class="section-heading">
       <p class="section-kicker">Réponse souhaitée avant le dimanche 26 avril</p>
-      <h2>Tu viens ?</h2>
+      <h2>On s’organise ?</h2>
       <p class="section-intro">
-        Dis-moi si tu seras là, quels jours tu viens, ce que tu veux chanter,
-        et laisse-moi un mot pour 00h15.
+        Dis-moi si tu seras là, combien vous serez, et si tu viens du vendredi 8 au dimanche 10 mai.
       </p>
     </div>
 
-    <form id="rsvp-form" class="rsvp-form" novalidate>
-      <div class="form-grid">
-        <section class="form-card">
-          <h3>Présence</h3>
+    <div class="forms-stack">
+      <section class="form-wrapper">
+        <div class="form-header">
+          <h3>1. Présence & week-end</h3>
+          <p>
+            Le principal : me dire si tu viens, combien vous serez, et si tu restes du vendredi 8 au dimanche 10 mai.
+          </p>
+        </div>
 
-          <label class="field">
-            <span>Prénom</span>
-            <input type="text" name="prenom" required placeholder="Ton prénom" />
-          </label>
+        <form id="rsvp-form" class="rsvp-form" novalidate>
+          <div class="form-grid">
+            <section class="form-card">
+              <h4>Identité</h4>
 
-          <label class="field">
-            <span>Tu seras là le samedi 9 mai au soir ?</span>
-            <select name="presence" required>
-              <option value="">Choisir</option>
-              <option value="oui">Oui</option>
-              <option value="non">Non</option>
-              <option value="peut-etre">Peut-être</option>
-            </select>
-          </label>
+              <label class="field">
+                <span>Prénom *</span>
+                <input type="text" name="prenom" required placeholder="Ton prénom" />
+              </label>
 
-          <label class="field">
-            <span>Vous serez combien ?</span>
-            <input
-              type="number"
-              name="nombre_personnes"
-              min="1"
-              max="10"
-              value="1"
-              required
-            />
-          </label>
-        </section>
+              <label class="field">
+                <span>Nom</span>
+                <input type="text" name="nom" placeholder="Ton nom" />
+              </label>
 
-        <section class="form-card">
-          <h3>Week-end prolongé</h3>
+              <label class="field">
+                <span>Ville</span>
+                <input type="text" name="ville" placeholder="D'où viens-tu ?" />
+              </label>
 
-          <fieldset class="field">
-            <legend>Tu viens quels jours ?</legend>
-              <p class="field-hint">
-                La soirée principale est le samedi 9 mai au soir
-              </p>
-            <label class="check-option">
-            <input type="checkbox" name="jours" value="vendredi-8-mai" />
-            <span>Vendredi 8 mai</span>
-          </label>
-          <label class="check-option">
-            <input type="checkbox" name="jours" value="samedi-9-mai" />
-            <span>Samedi 9 mai (soirée)</span>
-          </label>
-          <label class="check-option">
-            <input type="checkbox" name="jours" value="dimanche-10-mai" />
-            <span>Dimanche 10 mai</span>
-          </label>
-          </fieldset>
+              <label class="field">
+                <span>Vous serez combien ? *</span>
+                <input type="number" name="nombre_personnes" min="1" max="10" value="1" required />
+              </label>
+            </section>
 
-          <div class="field-row">
-            <label class="field">
-              <span>Arrivée</span>
-              <input type="date" name="arrivee" />
-            </label>
+            <section class="form-card">
+              <h4>Présence</h4>
 
-            <label class="field">
-              <span>Départ</span>
-              <input type="date" name="depart" />
-            </label>
+              <label class="field">
+                <span>Tu seras là le samedi 9 mai au soir ? *</span>
+                <select name="presence" required>
+                  <option value="">Choisir</option>
+                  <option value="oui">Oui</option>
+                  <option value="non">Non</option>
+                  <option value="peut-etre">Peut-être</option>
+                </select>
+              </label>
+
+              <fieldset class="field">
+                <legend>Tu viens quels jours ?</legend>
+                <p class="field-hint">
+                  La soirée principale est le samedi 9 mai au soir, avec le passage à 00h15 dans la nuit du 9 au 10.
+                </p>
+
+                <label class="check-option">
+                  <input type="checkbox" name="jours" value="vendredi-8-mai" />
+                  <span>Vendredi 8 mai</span>
+                </label>
+
+                <label class="check-option">
+                  <input type="checkbox" name="jours" value="samedi-9-mai" />
+                  <span>Samedi 9 mai (soirée)</span>
+                </label>
+
+                <label class="check-option">
+                  <input type="checkbox" name="jours" value="dimanche-10-mai" />
+                  <span>Dimanche 10 mai</span>
+                </label>
+              </fieldset>
+            </section>
+
+            <section class="form-card form-card--full">
+              <h4>Organisation</h4>
+
+              <div class="field-row">
+                <label class="field">
+                  <span>Arrivée</span>
+                  <input type="date" name="arrivee" />
+                </label>
+
+                <label class="field">
+                  <span>Départ</span>
+                  <input type="date" name="depart" />
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Tu as besoin d’un couchage ou d’infos logement ?</span>
+                <select name="logement">
+                  <option value="">Choisir</option>
+                  <option value="non">Non</option>
+                  <option value="oui-couchage">Oui, j’aurai peut-être besoin d’un couchage</option>
+                  <option value="oui-infos">Oui, j’aimerais des infos logement</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Commentaire pratique</span>
+                <textarea
+                  name="commentaire_logistique"
+                  rows="4"
+                  maxlength="500"
+                  placeholder="Une précision, une question, une info utile…"
+                ></textarea>
+              </label>
+            </section>
           </div>
 
-          <label class="field">
-            <span>Tu as besoin d’un couchage ou d’infos logement ?</span>
-            <select name="logement">
-              <option value="">Choisir</option>
-              <option value="non">Non</option>
-              <option value="oui-couchage">Oui, j’aurai peut-être besoin d’un couchage</option>
-              <option value="oui-infos">Oui, j’aimerais des infos logement</option>
-            </select>
-          </label>
-        </section>
+          <div class="form-actions">
+            <button type="submit" class="button button-submit">
+              Envoyer ma réponse
+            </button>
+            <p id="rsvp-status" class="form-status" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
 
-        <section class="form-card">
-          <h3>Ambiance</h3>
-
-          <label class="field">
-            <span>Ta chanson de karaoké</span>
-            <input
-              type="text"
-              name="karaoke"
-              placeholder="Ex. Les démons de minuit"
-            />
-          </label>
-
-          <label class="field">
-            <span>Une musique à passer pendant la soirée</span>
-            <input
-              type="text"
-              name="musique_soiree"
-              placeholder="Un titre qui met l’ambiance"
-            />
-          </label>
-
-          <label class="field">
-            <span>Une chanson un peu honteuse assumée</span>
-            <input
-              type="text"
-              name="guilty_pleasure"
-              placeholder="Optionnel 😄"
-            />
-          </label>
-        </section>
-
-        <section class="form-card">
-          <h3>Un mot pour 00h15</h3>
-
-          <label class="field">
-            <span>Ton message</span>
-            <textarea
-              name="message_0015"
-              rows="6"
-              maxlength="600"
-              placeholder="Écris un petit mot à découvrir à 00h15…"
-            ></textarea>
-          </label>
-
-          <label class="field">
-            <span>Ajouter une vidéo</span>
-            <input
-              type="file"
-              name="video"
-              accept="video/*"
-              capture="user"
-            />
-          </label>
-
-          <p class="field-hint">
-            Tu pourras filmer directement avec ton téléphone ou choisir une vidéo existante.
+      <section class="form-wrapper">
+        <div class="form-header">
+          <h3>2. Capsule 00h15 ✨</h3>
+          <p>
+            Un petit mot, une vidéo, une surprise… tout sera découvert à 00h15.
           </p>
-        </section>
+        </div>
 
-        <section class="form-card form-card--full">
-          <h3>Un dernier mot</h3>
+        <div class="capsule-card">
+          <p class="capsule-text">
+            Ajoute une chanson à la playlist, laisse un petit mot, ou envoie une vidéo pour le moment exact : 00h15.
+          </p>
 
-          <label class="field">
-            <span>Commentaire</span>
-            <textarea
-              name="commentaire"
-              rows="4"
-              maxlength="500"
-              placeholder="Une précision, une question, une info pratique…"
-            ></textarea>
-          </label>
-        </section>
-      </div>
+          <div class="capsule-actions">
+            <a
+              href="https://open.spotify.com/playlist/0p4vlzNSR07irTelCjNL70?si=31f6f51648544119&pt=b3207c7bda232344201ec260854953d3"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-secondary"
+            >
+              🎧 Ajouter une musique
+            </a>
 
-      <div class="form-actions">
-        <button type="submit" class="button button-submit">
-          Envoyer ma réponse
-        </button>
-        <p id="form-status" class="form-status" aria-live="polite"></p>
-      </div>
-    </form>
+            <a
+              href="https://airtable.com/shr9khiqdKAM1EJtT"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-primary"
+            >
+              🎥 Laisser un message / vidéo
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </section>
     </main>

@@ -73,22 +73,3 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-const form = document.getElementById("rsvp-form");
-const formStatus = document.getElementById("form-status");
-
-if (form) {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const prenom = form.querySelector('[name="prenom"]').value.trim();
-    const presence = form.querySelector('[name="presence"]').value;
-    const nombrePersonnes = form.querySelector('[name="nombre_personnes"]').value;
-
-    if (!prenom || !presence || !nombrePersonnes) {
-      formStatus.textContent = "Merci de remplir au minimum ton prénom, ta présence et le nombre de personnes.";
-      return;
-    }
-
-    formStatus.textContent = "Le formulaire est prêt. Prochaine étape : connexion à Airtable et upload vidéo.";
-  });
-}

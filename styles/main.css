@@ -234,9 +234,9 @@ li {
 *********************/
 
 
-
 .rsvp-section {
-  padding: 5rem 0 6rem;
+  padding: 5rem 0 ;
+   padding-bottom: 2.5rem;
 }
 
 .section-heading {
@@ -263,6 +263,37 @@ li {
   color: var(--muted);
 }
 
+.forms-stack {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.form-wrapper {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 28px;
+  padding: 1.5rem;
+  box-shadow:
+    0 0 20px rgba(123, 97, 255, 0.08),
+    0 0 30px rgba(255, 78, 205, 0.04);
+}
+
+.form-header {
+  max-width: 760px;
+}
+
+.form-header h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+
+.form-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .rsvp-form {
   max-width: 1100px;
   margin: 0 auto;
@@ -285,13 +316,9 @@ li {
     0 0 28px rgba(255, 78, 205, 0.05);
 }
 
-.form-card--full {
-  grid-column: 1 / -1;
-}
-
-.form-card h3 {
+.form-card h4 {
   margin: 0 0 1.2rem;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: var(--text);
 }
 
@@ -371,14 +398,17 @@ fieldset.field {
   margin: 0.35rem 0 0;
   font-size: 0.92rem;
   color: var(--muted);
+  line-height: 1.5;
 }
 
-.form-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.9rem;
-  margin-top: 2rem;
+.field-hint a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.field-hint a:hover {
+  text-decoration: underline;
 }
 
 .button-submit {
@@ -388,9 +418,14 @@ fieldset.field {
 }
 
 .form-status {
-  min-height: 1.5rem;
+  margin: 0;
+  min-height: 0;
   color: var(--muted);
   text-align: center;
+}
+
+.form-status:empty {
+  display: none;
 }
 
 @media (max-width: 800px) {
@@ -402,7 +437,46 @@ fieldset.field {
     grid-template-columns: 1fr;
   }
 
-  .form-card--full {
-    grid-column: auto;
+  .form-wrapper {
+    padding: 1.2rem;
   }
+}
+
+.form-card--full {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.capsule-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.capsule-card {
+  padding: 1.8rem; /* au lieu de 2rem */
+}
+
+.form-wrapper h3 {
+  background: linear-gradient(135deg, #ff4ecd, #7b61ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-wrapper:last-of-type {
+  margin-bottom: 0;
+}
+
+.forms-stack {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
