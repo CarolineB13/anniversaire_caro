@@ -81,10 +81,178 @@
         </p>
       </section>
 
-      <section id="rsvp" class="rsvp container">
-        <h2>Réponse avant le dimanche 26 avril</h2>
-        <p>Le formulaire arrivera ici.</p>
-      </section>
+      <section id="rsvp" class="rsvp-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-kicker">Réponse souhaitée avant le dimanche 26 avril</p>
+      <h2>Tu viens ?</h2>
+      <p class="section-intro">
+        Dis-moi si tu seras là, quels jours tu viens, ce que tu veux chanter,
+        et laisse-moi un mot pour 00h15.
+      </p>
+    </div>
+
+    <form id="rsvp-form" class="rsvp-form" novalidate>
+      <div class="form-grid">
+        <section class="form-card">
+          <h3>Présence</h3>
+
+          <label class="field">
+            <span>Prénom</span>
+            <input type="text" name="prenom" required placeholder="Ton prénom" />
+          </label>
+
+          <label class="field">
+            <span>Tu seras là le samedi 9 mai au soir ?</span>
+            <select name="presence" required>
+              <option value="">Choisir</option>
+              <option value="oui">Oui</option>
+              <option value="non">Non</option>
+              <option value="peut-etre">Peut-être</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Vous serez combien ?</span>
+            <input
+              type="number"
+              name="nombre_personnes"
+              min="1"
+              max="10"
+              value="1"
+              required
+            />
+          </label>
+        </section>
+
+        <section class="form-card">
+          <h3>Week-end prolongé</h3>
+
+          <fieldset class="field">
+            <legend>Tu viens quels jours ?</legend>
+              <p class="field-hint">
+                La soirée principale est le samedi 9 mai au soir
+              </p>
+            <label class="check-option">
+            <input type="checkbox" name="jours" value="vendredi-8-mai" />
+            <span>Vendredi 8 mai</span>
+          </label>
+          <label class="check-option">
+            <input type="checkbox" name="jours" value="samedi-9-mai" />
+            <span>Samedi 9 mai (soirée)</span>
+          </label>
+          <label class="check-option">
+            <input type="checkbox" name="jours" value="dimanche-10-mai" />
+            <span>Dimanche 10 mai</span>
+          </label>
+          </fieldset>
+
+          <div class="field-row">
+            <label class="field">
+              <span>Arrivée</span>
+              <input type="date" name="arrivee" />
+            </label>
+
+            <label class="field">
+              <span>Départ</span>
+              <input type="date" name="depart" />
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Tu as besoin d’un couchage ou d’infos logement ?</span>
+            <select name="logement">
+              <option value="">Choisir</option>
+              <option value="non">Non</option>
+              <option value="oui-couchage">Oui, j’aurai peut-être besoin d’un couchage</option>
+              <option value="oui-infos">Oui, j’aimerais des infos logement</option>
+            </select>
+          </label>
+        </section>
+
+        <section class="form-card">
+          <h3>Ambiance</h3>
+
+          <label class="field">
+            <span>Ta chanson de karaoké</span>
+            <input
+              type="text"
+              name="karaoke"
+              placeholder="Ex. Les démons de minuit"
+            />
+          </label>
+
+          <label class="field">
+            <span>Une musique à passer pendant la soirée</span>
+            <input
+              type="text"
+              name="musique_soiree"
+              placeholder="Un titre qui met l’ambiance"
+            />
+          </label>
+
+          <label class="field">
+            <span>Une chanson un peu honteuse assumée</span>
+            <input
+              type="text"
+              name="guilty_pleasure"
+              placeholder="Optionnel 😄"
+            />
+          </label>
+        </section>
+
+        <section class="form-card">
+          <h3>Un mot pour 00h15</h3>
+
+          <label class="field">
+            <span>Ton message</span>
+            <textarea
+              name="message_0015"
+              rows="6"
+              maxlength="600"
+              placeholder="Écris un petit mot à découvrir à 00h15…"
+            ></textarea>
+          </label>
+
+          <label class="field">
+            <span>Ajouter une vidéo</span>
+            <input
+              type="file"
+              name="video"
+              accept="video/*"
+              capture="user"
+            />
+          </label>
+
+          <p class="field-hint">
+            Tu pourras filmer directement avec ton téléphone ou choisir une vidéo existante.
+          </p>
+        </section>
+
+        <section class="form-card form-card--full">
+          <h3>Un dernier mot</h3>
+
+          <label class="field">
+            <span>Commentaire</span>
+            <textarea
+              name="commentaire"
+              rows="4"
+              maxlength="500"
+              placeholder="Une précision, une question, une info pratique…"
+            ></textarea>
+          </label>
+        </section>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="button button-submit">
+          Envoyer ma réponse
+        </button>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
     </main>
 
     <script src="./scripts/main.js"></script>

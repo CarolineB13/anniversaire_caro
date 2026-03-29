@@ -228,3 +228,181 @@ li {
       0 0 42px rgba(255, 78, 205, 0.16);
   }
 }
+
+/********************
+    SECTION RSVP
+*********************/
+
+
+
+.rsvp-section {
+  padding: 5rem 0 6rem;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+}
+
+.section-kicker {
+  margin: 0 0 0.8rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+}
+
+.section-heading h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.section-intro {
+  margin: 0;
+  color: var(--muted);
+}
+
+.rsvp-form {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.form-card {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 18px rgba(123, 97, 255, 0.1),
+    0 0 28px rgba(255, 78, 205, 0.05);
+}
+
+.form-card--full {
+  grid-column: 1 / -1;
+}
+
+.form-card h3 {
+  margin: 0 0 1.2rem;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.field span,
+.field legend {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.96rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(10, 10, 14, 0.78);
+  color: var(--text);
+  border-radius: 16px;
+  padding: 0.95rem 1rem;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: rgba(255, 78, 205, 0.6);
+  box-shadow:
+    0 0 0 3px rgba(255, 78, 205, 0.08),
+    0 0 20px rgba(123, 97, 255, 0.12);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+fieldset.field {
+  border: 0;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.check-option {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 0.7rem;
+}
+
+.check-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--pink);
+}
+
+.field-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.button-submit {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.form-status {
+  min-height: 1.5rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card--full {
+    grid-column: auto;
+  }
+}
