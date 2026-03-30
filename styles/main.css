@@ -480,3 +480,13 @@ fieldset.field {
   gap: 1.5rem;
   margin-top: 2rem;
 }
+
+.presence-help {
+  margin: 0.25rem 0 1rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.presence-help--negative {
+  color: rgba(255, 255, 255, 0.88);
+}

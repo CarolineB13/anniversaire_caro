@@ -81,7 +81,7 @@
         </p>
       </section>
 
-      <section id="rsvp" class="rsvp-section">
+<section id="rsvp" class="rsvp-section">
   <div class="container">
     <div class="section-heading">
       <p class="section-kicker">Réponse souhaitée avant le dimanche 26 avril</p>
@@ -98,92 +98,108 @@
           <p>
             Le principal : me dire si tu viens, combien vous serez, et si tu restes du vendredi 8 au dimanche 10 mai.
           </p>
+          <p class="field-hint">Les champs marqués d’un * sont obligatoires.</p>
         </div>
 
-        <form id="rsvp-form" class="rsvp-form" novalidate>
+        <form id="rsvp-form" class="rsvp-form">
           <div class="form-grid">
             <section class="form-card">
               <h4>Identité</h4>
 
               <label class="field">
                 <span>Prénom *</span>
-                <input type="text" name="prenom" required placeholder="Ton prénom" />
+                <input
+                  type="text"
+                  name="prenom"
+                  required
+                  placeholder="Ton prénom"
+                />
               </label>
 
               <label class="field">
                 <span>Nom</span>
-                <input type="text" name="nom" placeholder="Ton nom" />
+                <input
+                  type="text"
+                  name="nom"
+                  placeholder="Ton nom"
+                />
               </label>
 
               <label class="field">
-                <span>Ville</span>
-                <input type="text" name="ville" placeholder="D'où viens-tu ?" />
+                <span>Ville *</span>
+                <input
+                  type="text"
+                  name="ville"
+                  required
+                  placeholder="D'où viens-tu ?"
+                />
               </label>
 
               <label class="field">
                 <span>Vous serez combien ? *</span>
-                <input type="number" name="nombre_personnes" min="1" max="10" value="1" required />
+                <input
+                  type="number"
+                  name="nombre_personnes"
+                  min="1"
+                  max="10"
+                  value="1"
+                  required
+                />
               </label>
             </section>
 
             <section class="form-card">
-              <h4>Présence</h4>
+  <h4>Présence</h4>
 
-              <label class="field">
-                <span>Tu seras là le samedi 9 mai au soir ? *</span>
-                <select name="presence" required>
-                  <option value="">Choisir</option>
-                  <option value="oui">Oui</option>
-                  <option value="non">Non</option>
-                  <option value="peut-etre">Peut-être</option>
-                </select>
-              </label>
+  <label class="field">
+    <span>Tu seras là le samedi 9 mai au soir ? *</span>
+    <select name="presence" required>
+      <option value="">Choisir</option>
+      <option value="oui">Oui</option>
+      <option value="non">Non</option>
+      <option value="peut-etre">Peut-être</option>
+    </select>
+  </label>
 
-              <fieldset class="field">
-                <legend>Tu viens quels jours ?</legend>
-                <p class="field-hint">
-                  La soirée principale est le samedi 9 mai au soir, avec le passage à 00h15 dans la nuit du 9 au 10.
-                </p>
+  <p id="presence-help" class="presence-help" aria-live="polite"></p>
 
-                <label class="check-option">
-                  <input type="checkbox" name="jours" value="vendredi-8-mai" />
-                  <span>Vendredi 8 mai</span>
-                </label>
+  <fieldset class="field form-card--presence-dependent">
+    <legend>Tu viens quels jours ? *</legend>
+    <p class="field-hint">
+      La soirée principale est le samedi 9 mai au soir, avec le passage à 00h15 dans la nuit du 9 au 10.
+    </p>
 
-                <label class="check-option">
-                  <input type="checkbox" name="jours" value="samedi-9-mai" />
-                  <span>Samedi 9 mai (soirée)</span>
-                </label>
+    <label class="check-option">
+      <input type="checkbox" name="jours" value="vendredi-8-mai" />
+      <span>Vendredi 8 mai</span>
+    </label>
 
-                <label class="check-option">
-                  <input type="checkbox" name="jours" value="dimanche-10-mai" />
-                  <span>Dimanche 10 mai</span>
-                </label>
-              </fieldset>
-            </section>
+    <label class="check-option">
+      <input type="checkbox" name="jours" value="samedi-9-mai" />
+      <span>Samedi 9 mai (soirée)</span>
+    </label>
 
-            <section class="form-card form-card--full">
+    <label class="check-option">
+      <input type="checkbox" name="jours" value="dimanche-10-mai" />
+      <span>Dimanche 10 mai</span>
+    </label>
+  </fieldset>
+</section>
+
+            <section class="form-card form-card--full form-card--presence-dependent">
               <h4>Organisation</h4>
 
-              <div class="field-row">
-                <label class="field">
-                  <span>Arrivée</span>
-                  <input type="date" name="arrivee" />
-                </label>
-
-                <label class="field">
-                  <span>Départ</span>
-                  <input type="date" name="depart" />
-                </label>
-              </div>
-
               <label class="field">
-                <span>Tu as besoin d’un couchage ou d’infos logement ?</span>
-                <select name="logement">
+                <span>Tu as besoin d’un couchage ou d’infos logement ? *</span>
+                <select name="logement" required>
                   <option value="">Choisir</option>
                   <option value="non">Non</option>
-                  <option value="oui-couchage">Oui, j’aurai peut-être besoin d’un couchage</option>
-                  <option value="oui-infos">Oui, j’aimerais des infos logement</option>
+                  <option value="oui-couchage">
+                    Oui, j’aurai peut-être besoin d’un couchage
+                  </option>
+                  <option value="oui-infos">
+                    Oui, j’aimerais des infos logement
+                  </option>
                 </select>
               </label>
 
