@@ -42,7 +42,7 @@ setInterval(updateCountdown, 1000);
 
 // ===== Airtable RSVP =====
 
-const AIRTABLE_TOKEN = "AIRTABLE_TOKEN_LOCAL";
+const AIRTABLE_TOKEN = "";
 const BASE_ID = "appofq1X3dYCJBExO";
 const TABLE_NAME = "Invités";
 
